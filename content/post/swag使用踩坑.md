@@ -1,7 +1,11 @@
 ---
 title: "Swag使用踩坑"
 date: 2021-06-08T17:37:18+08:00
-draft: false
+categories:
+    - 服务端
+tags:
+    - Go
+    - swagger
 ---
 # swag 使用踩坑
 
