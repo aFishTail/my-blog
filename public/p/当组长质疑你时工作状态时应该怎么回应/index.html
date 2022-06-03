@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='组长： @团团圆圆小汤圆 你这问题很多，不知道你每天在公司干嘛? 移动端问题很多，如果改不动我只能上报 消极怠工了 工作是你自己的，还要我每天都在催这你改东西？
+  首先上班时间我没有做什么见不的人的事，不是改 bug 就是优化代码，commit 可以作为记录 关于改东西，我一开始是有意见、不想改，因为起初没有明确地规定功能具体怎么实现，做的过程中团队也没有良好地沟通，相同功能每个人做出来地效果不太一样。一开始不想改的原因是首先跟原实现方案冲突，改动不小，耗时间，另外容易引起 bug。比如行项目校验对齐报销，我从早上收到你信息明确要改动开始，一直改到下午 5 点之前，也跟原代码结构不是很好有关，改完就出现了审批查看就可以编辑的 bug。但从这之后我就很平常心地接受改动要求了，毕竟是给客户使用地，很有必要统一规范，改动过程中也能加深自己的理解。也比较乐于优化代码，比如列表的缓存，我就主动问组长你了，按你的思路改完后我试了下是可以比较优雅地实现缓存，然后也和大家说了可能引起 bug，最后下班前还把常见问题贴图了。那个退出了确认窗口还没消失，应该就和这改的缓存有关，因为之前一直没出过这问题。 工作是我自己的，我有自己的价值观。不敢说每天为这个项目付出多少心血，但是按时完成工作进度，完成工作安排我自认是做到的。每天下班前我都会看一眼 bug 系统，尽量解决完当天的 bug 再走。我没有觉得你在催我，也不想你催我。就说上周末你说的行项目校验改动吧，一开始我回复这里不好改，当天晚上就先把其他问题改好提交了代码。周一上班后你问我们情况，我说就剩这里还没改，你没有说什么，我仍然认为可以不改，因为付款实现也不一样。直到过了一两天收到你很明确的消息要改，我什么也没说，就说可以，还有点高估自己，以为半天就能改完，最后花了快一天时间。 你说的字体颜色确实和其他模块不一样，我自己也看到了，包括 loading 动画，可能不是很注重样式、交互这块，手头上也有其他要做的，就习惯性的遗漏掉了。昨天下班之前我改好了缓存，试了下没有问题就点了 bug。最后开了 teamviewer 准备周末在家再改一下李娜娜说的支付日期问题然后下班了。 项目从开始到目前收尾阶段不太容易，应该每个人都会想把它给做好，毕竟花掉了大半年时间在里面，都不会愿意草草收尾。如果有问题可以明确提出来，或者让测试提出 bug，一定会第一时间去解决的。 写这个回复从晚上 9.57 收到一直到现在快半夜 12 点，花了挺多时间，也算是结尾阶段对之前工作的一个思考吧。至于同事、组长、公司怎么认为我，工作积极或者消极怠工，心里自然有杆秤，我能做的就是做好自己应该做的，写好代码，加强沟通，尽量改善别人对我的认可。刚刚说的 bug 就明天早上再处理吧，晚了要休息，休息好才能解决问题。 本来只是想写下回复，但是嘴笨不知道怎么开口，最后就写成日记形式了，写完感觉也不容易，就发布吧。   组长： 很感谢你能花 2 个多小时写回复。沟通很重要你也清楚，我在很后面的时候看了移动端代码的时候才知道 vant 没有正确引用，大量的样式重写覆盖。有人跟我沟通吗？原因能找到吗？你只跟我说过移动端框架不好用，我真的不理解成熟的框架为什么不好用。 不想多说，做前端基本要求： 还原度 和 交互。有空看看你自己的页面，和其他业务的比较一下，看看有没有值得自己学习的地方
+ 我：
+当时觉得 Vant 不好用一是菜，之前用它做过两个小项目，一直觉得有问题但没有发现，二是浮躁，跟其他人一起抱怨移动端框架难用，没想着找原因。 交互和还原度确实差很多，也感觉自己现在喜欢写 JS，不太喜欢 CSS。 我会多看看别的业务页面，然后看看别人写的代码，统一交互、学习优化下。
+ 组长： 加油吧，远离舒适区，才能进步，不存在喜欢做什么不喜欢做什么。如果打算干 2 年转行就随意发挥。
+  因为是在前端工作群里，像“嗯嗯”，“好的”这种答复我就没有接着回复了。其实并没有不喜欢就不去做，而是存在一定的偏好。记得刚入门开发时，零基础，没有编程思维，看不懂js，不理解变量，函数到底是什么意思。 那时候第一次给我信心的就是CSS，记得当时看视频自学了绝对、相对布局，刚好上面安排了切图的活给我，正好派上用场。较短时间内画出了复杂的页面，后来当时主管龙哥还夸了下我，说我有这方面天赋。这给了我很大的信心、鼓励。后来也觉得CSS格外亲切，再难的页面我都有信心整出来，这就样带着一定的兴趣、信心慢慢入门了前端。 那从什么时候开始不太喜欢CSS，喜欢JS呢？首先和工作有一定的关系，入职网兜之后，一直用Vue做管理内系统，虽然功能逻辑、交互复杂，但是页面样式相对简单。像我负责某一模块开发的，很少会写复杂的CSS、动画，久而久之，也就对CSS失去了兴趣。其次，自己对JS的理解提升不少，体会到它了的美好，所以偏爱它。像面向对象、闭包、模块化，如果能够在项目中熟练使用，都是能够极大提高开发效率的语言特性。因此，目前我更愿意花时间去学习理解JS，优化代码，提升程序的设计，提高性能。 当然前端首先第一位就是切好图，做好交互，所以最近零碎时间也在看张旭鑫的CSS的世界，希望对CSS的理解能提升一点，这样开发时，效率就能提升很多。但是更多时间我还是用来学习JS，因为真香，以前花时间学Python真是被一些吹热度的人带到坑里去了，做事、学习应该先精一行再考虑其他，浅尝则止只会什么也做不好。'><title>当组长质疑你时工作状态时应该怎么回应？</title>
+
+<link rel='canonical' href='https://example.com/p/%E5%BD%93%E7%BB%84%E9%95%BF%E8%B4%A8%E7%96%91%E4%BD%A0%E6%97%B6%E5%B7%A5%E4%BD%9C%E7%8A%B6%E6%80%81%E6%97%B6%E5%BA%94%E8%AF%A5%E6%80%8E%E4%B9%88%E5%9B%9E%E5%BA%94/'>
+
+<link rel="stylesheet" href="/scss/style.min.450926226e724574a6b936335ea06111f8aeb253d932c86cb2cc807341cd2889.css"><meta property='og:title' content='当组长质疑你时工作状态时应该怎么回应？'>
+<meta property='og:description' content='组长： @团团圆圆小汤圆 你这问题很多，不知道你每天在公司干嘛? 移动端问题很多，如果改不动我只能上报 消极怠工了 工作是你自己的，还要我每天都在催这你改东西？
+  首先上班时间我没有做什么见不的人的事，不是改 bug 就是优化代码，commit 可以作为记录 关于改东西，我一开始是有意见、不想改，因为起初没有明确地规定功能具体怎么实现，做的过程中团队也没有良好地沟通，相同功能每个人做出来地效果不太一样。一开始不想改的原因是首先跟原实现方案冲突，改动不小，耗时间，另外容易引起 bug。比如行项目校验对齐报销，我从早上收到你信息明确要改动开始，一直改到下午 5 点之前，也跟原代码结构不是很好有关，改完就出现了审批查看就可以编辑的 bug。但从这之后我就很平常心地接受改动要求了，毕竟是给客户使用地，很有必要统一规范，改动过程中也能加深自己的理解。也比较乐于优化代码，比如列表的缓存，我就主动问组长你了，按你的思路改完后我试了下是可以比较优雅地实现缓存，然后也和大家说了可能引起 bug，最后下班前还把常见问题贴图了。那个退出了确认窗口还没消失，应该就和这改的缓存有关，因为之前一直没出过这问题。 工作是我自己的，我有自己的价值观。不敢说每天为这个项目付出多少心血，但是按时完成工作进度，完成工作安排我自认是做到的。每天下班前我都会看一眼 bug 系统，尽量解决完当天的 bug 再走。我没有觉得你在催我，也不想你催我。就说上周末你说的行项目校验改动吧，一开始我回复这里不好改，当天晚上就先把其他问题改好提交了代码。周一上班后你问我们情况，我说就剩这里还没改，你没有说什么，我仍然认为可以不改，因为付款实现也不一样。直到过了一两天收到你很明确的消息要改，我什么也没说，就说可以，还有点高估自己，以为半天就能改完，最后花了快一天时间。 你说的字体颜色确实和其他模块不一样，我自己也看到了，包括 loading 动画，可能不是很注重样式、交互这块，手头上也有其他要做的，就习惯性的遗漏掉了。昨天下班之前我改好了缓存，试了下没有问题就点了 bug。最后开了 teamviewer 准备周末在家再改一下李娜娜说的支付日期问题然后下班了。 项目从开始到目前收尾阶段不太容易，应该每个人都会想把它给做好，毕竟花掉了大半年时间在里面，都不会愿意草草收尾。如果有问题可以明确提出来，或者让测试提出 bug，一定会第一时间去解决的。 写这个回复从晚上 9.57 收到一直到现在快半夜 12 点，花了挺多时间，也算是结尾阶段对之前工作的一个思考吧。至于同事、组长、公司怎么认为我，工作积极或者消极怠工，心里自然有杆秤，我能做的就是做好自己应该做的，写好代码，加强沟通，尽量改善别人对我的认可。刚刚说的 bug 就明天早上再处理吧，晚了要休息，休息好才能解决问题。 本来只是想写下回复，但是嘴笨不知道怎么开口，最后就写成日记形式了，写完感觉也不容易，就发布吧。   组长： 很感谢你能花 2 个多小时写回复。沟通很重要你也清楚，我在很后面的时候看了移动端代码的时候才知道 vant 没有正确引用，大量的样式重写覆盖。有人跟我沟通吗？原因能找到吗？你只跟我说过移动端框架不好用，我真的不理解成熟的框架为什么不好用。 不想多说，做前端基本要求： 还原度 和 交互。有空看看你自己的页面，和其他业务的比较一下，看看有没有值得自己学习的地方
+ 我：
+当时觉得 Vant 不好用一是菜，之前用它做过两个小项目，一直觉得有问题但没有发现，二是浮躁，跟其他人一起抱怨移动端框架难用，没想着找原因。 交互和还原度确实差很多，也感觉自己现在喜欢写 JS，不太喜欢 CSS。 我会多看看别的业务页面，然后看看别人写的代码，统一交互、学习优化下。
+ 组长： 加油吧，远离舒适区，才能进步，不存在喜欢做什么不喜欢做什么。如果打算干 2 年转行就随意发挥。
+  因为是在前端工作群里，像“嗯嗯”，“好的”这种答复我就没有接着回复了。其实并没有不喜欢就不去做，而是存在一定的偏好。记得刚入门开发时，零基础，没有编程思维，看不懂js，不理解变量，函数到底是什么意思。 那时候第一次给我信心的就是CSS，记得当时看视频自学了绝对、相对布局，刚好上面安排了切图的活给我，正好派上用场。较短时间内画出了复杂的页面，后来当时主管龙哥还夸了下我，说我有这方面天赋。这给了我很大的信心、鼓励。后来也觉得CSS格外亲切，再难的页面我都有信心整出来，这就样带着一定的兴趣、信心慢慢入门了前端。 那从什么时候开始不太喜欢CSS，喜欢JS呢？首先和工作有一定的关系，入职网兜之后，一直用Vue做管理内系统，虽然功能逻辑、交互复杂，但是页面样式相对简单。像我负责某一模块开发的，很少会写复杂的CSS、动画，久而久之，也就对CSS失去了兴趣。其次，自己对JS的理解提升不少，体会到它了的美好，所以偏爱它。像面向对象、闭包、模块化，如果能够在项目中熟练使用，都是能够极大提高开发效率的语言特性。因此，目前我更愿意花时间去学习理解JS，优化代码，提升程序的设计，提高性能。 当然前端首先第一位就是切好图，做好交互，所以最近零碎时间也在看张旭鑫的CSS的世界，希望对CSS的理解能提升一点，这样开发时，效率就能提升很多。但是更多时间我还是用来学习JS，因为真香，以前花时间学Python真是被一些吹热度的人带到坑里去了，做事、学习应该先精一行再考虑其他，浅尝则止只会什么也做不好。'>
+<meta property='og:url' content='https://example.com/p/%E5%BD%93%E7%BB%84%E9%95%BF%E8%B4%A8%E7%96%91%E4%BD%A0%E6%97%B6%E5%B7%A5%E4%BD%9C%E7%8A%B6%E6%80%81%E6%97%B6%E5%BA%94%E8%AF%A5%E6%80%8E%E4%B9%88%E5%9B%9E%E5%BA%94/'>
+<meta property='og:site_name' content='一条鱼尾的博客'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2020-04-18T23:55:31&#43;08:00'/><meta property='article:modified_time' content='2020-04-18T23:55:31&#43;08:00'/>
+<meta name="twitter:title" content="当组长质疑你时工作状态时应该怎么回应？">
+<meta name="twitter:description" content="组长： @团团圆圆小汤圆 你这问题很多，不知道你每天在公司干嘛? 移动端问题很多，如果改不动我只能上报 消极怠工了 工作是你自己的，还要我每天都在催这你改东西？
+  首先上班时间我没有做什么见不的人的事，不是改 bug 就是优化代码，commit 可以作为记录 关于改东西，我一开始是有意见、不想改，因为起初没有明确地规定功能具体怎么实现，做的过程中团队也没有良好地沟通，相同功能每个人做出来地效果不太一样。一开始不想改的原因是首先跟原实现方案冲突，改动不小，耗时间，另外容易引起 bug。比如行项目校验对齐报销，我从早上收到你信息明确要改动开始，一直改到下午 5 点之前，也跟原代码结构不是很好有关，改完就出现了审批查看就可以编辑的 bug。但从这之后我就很平常心地接受改动要求了，毕竟是给客户使用地，很有必要统一规范，改动过程中也能加深自己的理解。也比较乐于优化代码，比如列表的缓存，我就主动问组长你了，按你的思路改完后我试了下是可以比较优雅地实现缓存，然后也和大家说了可能引起 bug，最后下班前还把常见问题贴图了。那个退出了确认窗口还没消失，应该就和这改的缓存有关，因为之前一直没出过这问题。 工作是我自己的，我有自己的价值观。不敢说每天为这个项目付出多少心血，但是按时完成工作进度，完成工作安排我自认是做到的。每天下班前我都会看一眼 bug 系统，尽量解决完当天的 bug 再走。我没有觉得你在催我，也不想你催我。就说上周末你说的行项目校验改动吧，一开始我回复这里不好改，当天晚上就先把其他问题改好提交了代码。周一上班后你问我们情况，我说就剩这里还没改，你没有说什么，我仍然认为可以不改，因为付款实现也不一样。直到过了一两天收到你很明确的消息要改，我什么也没说，就说可以，还有点高估自己，以为半天就能改完，最后花了快一天时间。 你说的字体颜色确实和其他模块不一样，我自己也看到了，包括 loading 动画，可能不是很注重样式、交互这块，手头上也有其他要做的，就习惯性的遗漏掉了。昨天下班之前我改好了缓存，试了下没有问题就点了 bug。最后开了 teamviewer 准备周末在家再改一下李娜娜说的支付日期问题然后下班了。 项目从开始到目前收尾阶段不太容易，应该每个人都会想把它给做好，毕竟花掉了大半年时间在里面，都不会愿意草草收尾。如果有问题可以明确提出来，或者让测试提出 bug，一定会第一时间去解决的。 写这个回复从晚上 9.57 收到一直到现在快半夜 12 点，花了挺多时间，也算是结尾阶段对之前工作的一个思考吧。至于同事、组长、公司怎么认为我，工作积极或者消极怠工，心里自然有杆秤，我能做的就是做好自己应该做的，写好代码，加强沟通，尽量改善别人对我的认可。刚刚说的 bug 就明天早上再处理吧，晚了要休息，休息好才能解决问题。 本来只是想写下回复，但是嘴笨不知道怎么开口，最后就写成日记形式了，写完感觉也不容易，就发布吧。   组长： 很感谢你能花 2 个多小时写回复。沟通很重要你也清楚，我在很后面的时候看了移动端代码的时候才知道 vant 没有正确引用，大量的样式重写覆盖。有人跟我沟通吗？原因能找到吗？你只跟我说过移动端框架不好用，我真的不理解成熟的框架为什么不好用。 不想多说，做前端基本要求： 还原度 和 交互。有空看看你自己的页面，和其他业务的比较一下，看看有没有值得自己学习的地方
+ 我：
+当时觉得 Vant 不好用一是菜，之前用它做过两个小项目，一直觉得有问题但没有发现，二是浮躁，跟其他人一起抱怨移动端框架难用，没想着找原因。 交互和还原度确实差很多，也感觉自己现在喜欢写 JS，不太喜欢 CSS。 我会多看看别的业务页面，然后看看别人写的代码，统一交互、学习优化下。
+ 组长： 加油吧，远离舒适区，才能进步，不存在喜欢做什么不喜欢做什么。如果打算干 2 年转行就随意发挥。
+  因为是在前端工作群里，像“嗯嗯”，“好的”这种答复我就没有接着回复了。其实并没有不喜欢就不去做，而是存在一定的偏好。记得刚入门开发时，零基础，没有编程思维，看不懂js，不理解变量，函数到底是什么意思。 那时候第一次给我信心的就是CSS，记得当时看视频自学了绝对、相对布局，刚好上面安排了切图的活给我，正好派上用场。较短时间内画出了复杂的页面，后来当时主管龙哥还夸了下我，说我有这方面天赋。这给了我很大的信心、鼓励。后来也觉得CSS格外亲切，再难的页面我都有信心整出来，这就样带着一定的兴趣、信心慢慢入门了前端。 那从什么时候开始不太喜欢CSS，喜欢JS呢？首先和工作有一定的关系，入职网兜之后，一直用Vue做管理内系统，虽然功能逻辑、交互复杂，但是页面样式相对简单。像我负责某一模块开发的，很少会写复杂的CSS、动画，久而久之，也就对CSS失去了兴趣。其次，自己对JS的理解提升不少，体会到它了的美好，所以偏爱它。像面向对象、闭包、模块化，如果能够在项目中熟练使用，都是能够极大提高开发效率的语言特性。因此，目前我更愿意花时间去学习理解JS，优化代码，提升程序的设计，提高性能。 当然前端首先第一位就是切好图，做好交互，所以最近零碎时间也在看张旭鑫的CSS的世界，希望对CSS的理解能提升一点，这样开发时，效率就能提升很多。但是更多时间我还是用来学习JS，因为真香，以前花时间学Python真是被一些吹热度的人带到坑里去了，做事、学习应该先精一行再考虑其他，浅尝则止只会什么也做不好。">
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar-ty_hu5248f3326a4846aa88299d6e4a95267b_366506_300x0_resize_q75_box.jpeg" width="300"
+                            height="304" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">🍥</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">一条鱼尾的博客</a></h1>
+            <h2 class="site-description">不忘初心</h2>
+        </div>
+    </header><ol class="social-menu">
+            
+                <li>
+                    <a 
+                        href='https://github.com/aFishTail'
+                        target="_blank"
+                        title="GitHub"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+
+        <div class="menu-bottom-section">
+                <li id="i18n-switch">  
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-language" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M4 5h7" />
+  <path d="M9 3v2c0 4.418 -2.239 8 -5 8" />
+  <path d="M5 9c-.003 2.144 2.952 3.908 6.7 4" />
+  <path d="M12 20l4 -9l4 9" />
+  <path d="M19.1 18h-6.2" />
+</svg>
+
+
+
+                    <select name="language" onchange="window.location.href = this.selectedOptions[0].value">
+                        
+                            <option value="https://example.com/" selected>中文</option>
+                        
+                            <option value="https://example.com/en/" >English</option>
+                        
+                    </select>
+                </li>
+            
+            
+            
+                <li id="dark-mode-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <span>暗色模式</span>
+                </li>
+            
+        </div>
+    </ol>
+</aside>
+<main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/%E4%B8%AA%E4%BA%BA%E6%88%90%E9%95%BF/" >
+                个人成长
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/%E5%BD%93%E7%BB%84%E9%95%BF%E8%B4%A8%E7%96%91%E4%BD%A0%E6%97%B6%E5%B7%A5%E4%BD%9C%E7%8A%B6%E6%80%81%E6%97%B6%E5%BA%94%E8%AF%A5%E6%80%8E%E4%B9%88%E5%9B%9E%E5%BA%94/">当组长质疑你时工作状态时应该怎么回应？</a>
+        </h2>
+    
+        
+    </div>
+
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Apr 18, 2020</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    阅读时长: 1 分钟
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+</header>
+
+    <section class="article-content">
+    
+    
+    <blockquote>
+<p>组长：
+@团团圆圆小汤圆 你这问题很多，不知道你每天在公司干嘛? 移动端问题很多，如果改不动我只能上报 消极怠工了
+工作是你自己的，还要我每天都在催这你改东西？</p>
+</blockquote>
+<ul>
+<li>首先上班时间我没有做什么见不的人的事，不是改 bug 就是优化代码，commit 可以作为记录</li>
+<li>关于改东西，我一开始是有意见、不想改，因为起初没有明确地规定功能具体怎么实现，做的过程中团队也没有良好地沟通，相同功能每个人做出来地效果不太一样。一开始不想改的原因是首先跟原实现方案冲突，改动不小，耗时间，另外容易引起 bug。比如行项目校验对齐报销，我从早上收到你信息明确要改动开始，一直改到下午 5 点之前，也跟原代码结构不是很好有关，改完就出现了审批查看就可以编辑的 bug。但从这之后我就很平常心地接受改动要求了，毕竟是给客户使用地，很有必要统一规范，改动过程中也能加深自己的理解。也比较乐于优化代码，比如列表的缓存，我就主动问组长你了，按你的思路改完后我试了下是可以比较优雅地实现缓存，然后也和大家说了可能引起 bug，最后下班前还把常见问题贴图了。那个退出了确认窗口还没消失，应该就和这改的缓存有关，因为之前一直没出过这问题。</li>
+<li>工作是我自己的，我有自己的价值观。不敢说每天为这个项目付出多少心血，但是按时完成工作进度，完成工作安排我自认是做到的。每天下班前我都会看一眼 bug 系统，尽量解决完当天的 bug 再走。我没有觉得你在催我，也不想你催我。就说上周末你说的行项目校验改动吧，一开始我回复这里不好改，当天晚上就先把其他问题改好提交了代码。周一上班后你问我们情况，我说就剩这里还没改，你没有说什么，我仍然认为可以不改，因为付款实现也不一样。直到过了一两天收到你很明确的消息要改，我什么也没说，就说可以，还有点高估自己，以为半天就能改完，最后花了快一天时间。</li>
+<li>你说的字体颜色确实和其他模块不一样，我自己也看到了，包括 loading 动画，可能不是很注重样式、交互这块，手头上也有其他要做的，就习惯性的遗漏掉了。昨天下班之前我改好了缓存，试了下没有问题就点了 bug。最后开了 teamviewer 准备周末在家再改一下李娜娜说的支付日期问题然后下班了。</li>
+<li>项目从开始到目前收尾阶段不太容易，应该每个人都会想把它给做好，毕竟花掉了大半年时间在里面，都不会愿意草草收尾。如果有问题可以明确提出来，或者让测试提出 bug，一定会第一时间去解决的。</li>
+<li>写这个回复从晚上 9.57 收到一直到现在快半夜 12 点，花了挺多时间，也算是结尾阶段对之前工作的一个思考吧。至于同事、组长、公司怎么认为我，工作积极或者消极怠工，心里自然有杆秤，我能做的就是做好自己应该做的，写好代码，加强沟通，尽量改善别人对我的认可。刚刚说的 bug 就明天早上再处理吧，晚了要休息，休息好才能解决问题。</li>
+<li>本来只是想写下回复，但是嘴笨不知道怎么开口，最后就写成日记形式了，写完感觉也不容易，就发布吧。</li>
+</ul>
+<blockquote>
+<p>组长：
+很感谢你能花 2 个多小时写回复。沟通很重要你也清楚，我在很后面的时候看了移动端代码的时候才知道 vant 没有正确引用，大量的样式重写覆盖。有人跟我沟通吗？原因能找到吗？你只跟我说过移动端框架不好用，我真的不理解成熟的框架为什么不好用。
+不想多说，做前端基本要求：
+还原度 和 交互。有空看看你自己的页面，和其他业务的比较一下，看看有没有值得自己学习的地方</p>
+</blockquote>
+<p>我：<br>
+当时觉得 Vant 不好用一是菜，之前用它做过两个小项目，一直觉得有问题但没有发现，二是浮躁，跟其他人一起抱怨移动端框架难用，没想着找原因。
+交互和还原度确实差很多，也感觉自己现在喜欢写 JS，不太喜欢 CSS。
+我会多看看别的业务页面，然后看看别人写的代码，统一交互、学习优化下。</p>
+<blockquote>
+<p>组长：
+加油吧，远离舒适区，才能进步，不存在喜欢做什么不喜欢做什么。如果打算干 2 年转行就随意发挥。</p>
+</blockquote>
+<hr>
+<p>因为是在前端工作群里，像“嗯嗯”，“好的”这种答复我就没有接着回复了。其实并没有不喜欢就不去做，而是存在一定的偏好。记得刚入门开发时，零基础，没有编程思维，看不懂js，不理解变量，函数到底是什么意思。
+那时候第一次给我信心的就是CSS，记得当时看视频自学了绝对、相对布局，刚好上面安排了切图的活给我，正好派上用场。较短时间内画出了复杂的页面，后来当时主管龙哥还夸了下我，说我有这方面天赋。这给了我很大的信心、鼓励。后来也觉得CSS格外亲切，再难的页面我都有信心整出来，这就样带着一定的兴趣、信心慢慢入门了前端。
+那从什么时候开始不太喜欢CSS，喜欢JS呢？首先和工作有一定的关系，入职网兜之后，一直用Vue做管理内系统，虽然功能逻辑、交互复杂，但是页面样式相对简单。像我负责某一模块开发的，很少会写复杂的CSS、动画，久而久之，也就对CSS失去了兴趣。其次，自己对JS的理解提升不少，体会到它了的美好，所以偏爱它。像面向对象、闭包、模块化，如果能够在项目中熟练使用，都是能够极大提高开发效率的语言特性。因此，目前我更愿意花时间去学习理解JS，优化代码，提升程序的设计，提高性能。
+当然前端首先第一位就是切好图，做好交互，所以最近零碎时间也在看张旭鑫的<strong>CSS的世界</strong>，希望对CSS的理解能提升一点，这样开发时，效率就能提升很多。但是更多时间我还是用来学习JS，因为真香，以前花时间学Python真是被一些吹热度的人带到坑里去了，做事、学习应该先精一行再考虑其他，浅尝则止只会什么也做不好。</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-contents--wrapper">
+    <h2 class="section-title">相关文章</h2>
+    <div class="related-contents">
+        <div class="flex article-list--tile">
+            
+                
+<article class="">
+    <a href="/p/2020%E5%B9%B4%E4%B8%83%E5%85%AB%E6%9C%88%E4%BB%BD%E6%89%BE%E5%B7%A5%E4%BD%9C%E8%AE%B0%E5%BD%95/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">2020年七八月份找工作记录</h2>
+        </div>
+    </a>
+</article>
+            
+                
+<article class="">
+    <a href="/p/%E8%AE%B0%E9%A2%90%E6%B5%B7%E6%8A%A5%E9%94%80%E9%A1%B9%E7%9B%AE%E4%BA%A4%E6%8E%A5%E8%AE%B2%E8%A7%A3/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">记颐海报销项目交接讲解</h2>
+        </div>
+    </a>
+</article>
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    <div class="disqus-container">
+    <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "hugo-theme-stack" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+<style>
+    .disqus-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+    }
+</style>
+
+<script>
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (DISQUS) {
+            DISQUS.reset({
+                reload: true
+            });
+        }
+    })
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2020 - 
+        
+        2022 一条鱼尾的博客
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.11.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+        备案号：苏ICP备2021052498号
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css"integrity="sha256-c0uckgykQ9v5k&#43;IqViZOZKc47Jn7KQil4/MP3ySA3F8="crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css"integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE="crossorigin="anonymous"
+            >
+
+            </main>
+    
+
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js"integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+<script>
+    const el = document.querySelector('.powerby')
+    console.log('el:', el)
+    const beian = document.createElement('span')
+    beian.style='margin-left:1rem;'
+    beian.innerText = '备案号：苏ICP备2021052498号'
+    el.appendChild(beian)
+</script>
+    </body>
+</html>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>git on 一条鱼尾的博客</title>
+        <link>https://example.com/tags/git/</link>
+        <description>Recent content in git on 一条鱼尾的博客</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <lastBuildDate>Fri, 08 May 2020 22:27:48 +0800</lastBuildDate><atom:link href="https://example.com/tags/git/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>gitignore 配置语法</title>
+        <link>https://example.com/p/gitignore-%E9%85%8D%E7%BD%AE%E8%AF%AD%E6%B3%95/</link>
+        <pubDate>Fri, 08 May 2020 22:27:48 +0800</pubDate>
+        
+        <guid>https://example.com/p/gitignore-%E9%85%8D%E7%BD%AE%E8%AF%AD%E6%B3%95/</guid>
+        <description>&lt;p&gt;匹配模式前&lt;code&gt;/&lt;/code&gt;代表项目根目录&lt;/p&gt;
+&lt;p&gt;匹配模式后&lt;code&gt;/&lt;/code&gt;代表是目录&lt;/p&gt;
+&lt;p&gt;匹配模式后前加&lt;code&gt;!&lt;/code&gt;代表取反&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;*&lt;/code&gt;代表任意个字符&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;?&lt;/code&gt;匹配任意一个字符&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;**&lt;/code&gt;匹配多级目录&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

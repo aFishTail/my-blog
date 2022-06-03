@@ -1,0 +1,2908 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='1  来源： 慕课网-快速搞定前端初级javascript面试题   快速搞定前端初级javascript面试题 一、简介 如何搞定所有面试题 前端知识体系 什么是知识体系 高效学习三部曲：  找准知识体系 刻意练习 及时反馈  知识体系：结构化知识范围 涵盖所有知识点：  结构化 有组织 易扩展  从哪方面梳理 W3C标准 ECMA 262 标准 开发环境 运行环境 知识体系目录 二、变量类型和计算 变量类型和计算 题目  typeOf能判断哪些类型 何时使用 === 何时使用 == 值类型和引用类型的区别 手写深拷贝  知识点  变量类型  值类型 vs 引用类型 typeOf运算符 深拷贝   变量计算  解答 typeof 和深拷贝 typeOf运算符  识别所有值类型 1 2 3 4 5  let a; typeOf a // &amp;#39;undefined&amp;#39; const str = &amp;#39;abc&amp;#39; typeOf str // &amp;#39;string&amp;#39; const n = 100 typeOf n // &amp;#39;number&amp;#39; const b = true typeOf b // &amp;#39;boolean&amp;#39; const s = Symbol(&amp;#39;s&amp;#39;) typeOf s // &amp;#39;symbol&amp;#39;    识别函数 1 2  typeOf console.'><title>快速搞定javascript前端面试学习笔记</title>
+
+<link rel='canonical' href='https://example.com/p/%E5%BF%AB%E9%80%9F%E6%90%9E%E5%AE%9Ajavascript%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/'>
+
+<link rel="stylesheet" href="/scss/style.min.450926226e724574a6b936335ea06111f8aeb253d932c86cb2cc807341cd2889.css"><meta property='og:title' content='快速搞定javascript前端面试学习笔记'>
+<meta property='og:description' content='1  来源： 慕课网-快速搞定前端初级javascript面试题   快速搞定前端初级javascript面试题 一、简介 如何搞定所有面试题 前端知识体系 什么是知识体系 高效学习三部曲：  找准知识体系 刻意练习 及时反馈  知识体系：结构化知识范围 涵盖所有知识点：  结构化 有组织 易扩展  从哪方面梳理 W3C标准 ECMA 262 标准 开发环境 运行环境 知识体系目录 二、变量类型和计算 变量类型和计算 题目  typeOf能判断哪些类型 何时使用 === 何时使用 == 值类型和引用类型的区别 手写深拷贝  知识点  变量类型  值类型 vs 引用类型 typeOf运算符 深拷贝   变量计算  解答 typeof 和深拷贝 typeOf运算符  识别所有值类型 1 2 3 4 5  let a; typeOf a // &amp;#39;undefined&amp;#39; const str = &amp;#39;abc&amp;#39; typeOf str // &amp;#39;string&amp;#39; const n = 100 typeOf n // &amp;#39;number&amp;#39; const b = true typeOf b // &amp;#39;boolean&amp;#39; const s = Symbol(&amp;#39;s&amp;#39;) typeOf s // &amp;#39;symbol&amp;#39;    识别函数 1 2  typeOf console.'>
+<meta property='og:url' content='https://example.com/p/%E5%BF%AB%E9%80%9F%E6%90%9E%E5%AE%9Ajavascript%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/'>
+<meta property='og:site_name' content='一条鱼尾的博客'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='面试' /><meta property='article:tag' content='Javascript' /><meta property='article:published_time' content='2020-07-16T10:42:38&#43;08:00'/><meta property='article:modified_time' content='2020-07-16T10:42:38&#43;08:00'/>
+<meta name="twitter:title" content="快速搞定javascript前端面试学习笔记">
+<meta name="twitter:description" content="1  来源： 慕课网-快速搞定前端初级javascript面试题   快速搞定前端初级javascript面试题 一、简介 如何搞定所有面试题 前端知识体系 什么是知识体系 高效学习三部曲：  找准知识体系 刻意练习 及时反馈  知识体系：结构化知识范围 涵盖所有知识点：  结构化 有组织 易扩展  从哪方面梳理 W3C标准 ECMA 262 标准 开发环境 运行环境 知识体系目录 二、变量类型和计算 变量类型和计算 题目  typeOf能判断哪些类型 何时使用 === 何时使用 == 值类型和引用类型的区别 手写深拷贝  知识点  变量类型  值类型 vs 引用类型 typeOf运算符 深拷贝   变量计算  解答 typeof 和深拷贝 typeOf运算符  识别所有值类型 1 2 3 4 5  let a; typeOf a // &amp;#39;undefined&amp;#39; const str = &amp;#39;abc&amp;#39; typeOf str // &amp;#39;string&amp;#39; const n = 100 typeOf n // &amp;#39;number&amp;#39; const b = true typeOf b // &amp;#39;boolean&amp;#39; const s = Symbol(&amp;#39;s&amp;#39;) typeOf s // &amp;#39;symbol&amp;#39;    识别函数 1 2  typeOf console.">
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar-ty_hu5248f3326a4846aa88299d6e4a95267b_366506_300x0_resize_q75_box.jpeg" width="300"
+                            height="304" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">🍥</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">一条鱼尾的博客</a></h1>
+            <h2 class="site-description">不忘初心</h2>
+        </div>
+    </header><ol class="social-menu">
+            
+                <li>
+                    <a 
+                        href='https://github.com/aFishTail'
+                        target="_blank"
+                        title="GitHub"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+
+        <div class="menu-bottom-section">
+                <li id="i18n-switch">  
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-language" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M4 5h7" />
+  <path d="M9 3v2c0 4.418 -2.239 8 -5 8" />
+  <path d="M5 9c-.003 2.144 2.952 3.908 6.7 4" />
+  <path d="M12 20l4 -9l4 9" />
+  <path d="M19.1 18h-6.2" />
+</svg>
+
+
+
+                    <select name="language" onchange="window.location.href = this.selectedOptions[0].value">
+                        
+                            <option value="https://example.com/" selected>中文</option>
+                        
+                            <option value="https://example.com/en/" >English</option>
+                        
+                    </select>
+                </li>
+            
+            
+            
+                <li id="dark-mode-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <span>暗色模式</span>
+                </li>
+            
+        </div>
+    </ol>
+</aside>
+<main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/%E5%89%8D%E7%AB%AF/" >
+                前端
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/%E5%BF%AB%E9%80%9F%E6%90%9E%E5%AE%9Ajavascript%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">快速搞定javascript前端面试学习笔记</a>
+        </h2>
+    
+        
+    </div>
+
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Jul 16, 2020</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    阅读时长: 14 分钟
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+</header>
+
+    <section class="article-content">
+    
+    
+    <div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">来源： 慕课网-快速搞定前端初级javascript面试题
+</code></pre></td></tr></table>
+</div>
+</div><h1 id="快速搞定前端初级javascript面试题">快速搞定前端初级javascript面试题</h1>
+<h2 id="一简介">一、简介</h2>
+<h3 id="如何搞定所有面试题">如何搞定所有面试题</h3>
+<h3 id="前端知识体系">前端知识体系</h3>
+<h4 id="什么是知识体系">什么是知识体系</h4>
+<h5 id="高效学习三部曲">高效学习三部曲：</h5>
+<ul>
+<li>找准知识体系</li>
+<li>刻意练习</li>
+<li>及时反馈</li>
+</ul>
+<h5 id="知识体系结构化知识范围">知识体系：结构化知识范围</h5>
+<h5 id="涵盖所有知识点">涵盖所有知识点：</h5>
+<ul>
+<li>结构化</li>
+<li>有组织</li>
+<li>易扩展</li>
+</ul>
+<h4 id="从哪方面梳理">从哪方面梳理</h4>
+<h5 id="w3c标准">W3C标准</h5>
+<h5 id="ecma-262-标准">ECMA 262 标准</h5>
+<h5 id="开发环境">开发环境</h5>
+<h5 id="运行环境">运行环境</h5>
+<h4 id="知识体系目录">知识体系目录</h4>
+<h2 id="二变量类型和计算">二、变量类型和计算</h2>
+<h3 id="变量类型和计算">变量类型和计算</h3>
+<h4 id="题目">题目</h4>
+<ul>
+<li>typeOf能判断哪些类型</li>
+<li>何时使用 === 何时使用 ==</li>
+<li>值类型和引用类型的区别</li>
+<li>手写深拷贝</li>
+</ul>
+<h4 id="知识点">知识点</h4>
+<ul>
+<li>变量类型
+<ul>
+<li>值类型 vs 引用类型</li>
+<li>typeOf运算符</li>
+<li>深拷贝</li>
+</ul>
+</li>
+<li>变量计算</li>
+</ul>
+<h4 id="解答">解答</h4>
+<h3 id="typeof-和深拷贝">typeof 和深拷贝</h3>
+<h4 id="typeof运算符">typeOf运算符</h4>
+<ul>
+<li>识别所有值类型
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">let a; typeOf a // &#39;undefined&#39;
+const str = &#39;abc&#39; typeOf str // &#39;string&#39;
+const n = 100 typeOf n // &#39;number&#39;
+const b = true typeOf b // &#39;boolean&#39;
+const s = Symbol(&#39;s&#39;) typeOf s // &#39;symbol&#39;
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>识别函数
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">typeOf console.log // &#39;function&#39;
+typeOf function () {} // &#39;function&#39;
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>判断是否是引用类型（不可再细分）
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">typeOf null &#39;Object&#39;
+typeOf [&#39;a&#39;, &#39;b&#39;] &#39;Object&#39;
+typeOf {x: 100} &#39;Object&#39;
+</code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+<h4 id="深拷贝">深拷贝</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">/**
+ * 深拷贝
+ * @param {Object} obj 要拷贝的对象
+ */
+function deepClone(obj = {}) {
+    // 非复杂对象类型直接返回
+    if(typeof obj !== &#39;object&#39; || obj == null) {
+        return obj
+    }
+    // 初始化返回结果
+    let result
+    if(obj instanceof Array) {
+        result = []
+    } else {
+        result = {}
+    }
+
+    for(let key in obj) {
+        if(obj.hasOwnProperty(key)) {
+            // 保证key不是原型的属性
+            result[key] = deepClone(obj[key])
+        }
+    }
+
+    // 返回结果
+    return result
+}
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="变量计算">变量计算</h3>
+<h4 id="类型转换">类型转换</h4>
+<ul>
+<li>字符串拼接
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">const a = 100 + 10 // 110
+const a = 100 + &#39;10&#39; // &#39;10010&#39;
+const a = true + &#39;10&#39; // &#39;true10&#39;
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li><code>==</code>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">100 == &#39;100&#39; // true
+0 == &#39;&#39; // true
+0 == false // true
+false == &#39;&#39; // true
+null == undefined // true
+</code></pre></td></tr></table>
+</div>
+</div><code>==</code>的隐式转化比较复杂，目前实际应用意义较小，没必要深究
+建议除了 <code>==</code> null 之外，其他一律使用 <code>===</code>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">const obj = {x: 100}
+if (obj.a == null) {}
+// 相当于
+// if(obj.a === undefined || obj.a === null) {}
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>if语句和逻辑运算
+<ul>
+<li>truly 变量： <code>!!a === true</code></li>
+<li>falsely 变量 <code>!!a === false</code></li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">!!0 === false
+!!NaN === false
+!!&#39;&#39; === false
+!!null === false
+!!undefined === false
+!!false === false
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>逻辑判断
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">console.log(10 &amp;&amp; 0) // 0
+console.log(&#39;&#39; || &#39;abc&#39;) // &#39;abc&#39;
+console.log(!window.a) // true
+</code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+<h2 id="三原型和原型链">三、原型和原型链</h2>
+<h3 id="class">class</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">  // 类
+  class Student {
+      constructor(name, number) {
+          this.name = name
+          this.number = number
+      }
+      sayHi() {
+          console.log(`姓名：${this.name},学号：${this.number}`)
+      }
+  }
+
+  // 通过new来生成对象/实例
+  const xialuo = new Student(&#39;夏洛&#39;, 100)
+  console.log(xialuo.name)
+  console.log(xialuo.number)
+  console.log(xialuo.sayHi())
+
+  const madongmei = new Student(&#39;马冬梅&#39;, 101)
+  console.log(madongmei.name)
+  console.log(madongmei.number)
+  console.log(madongmei.sayHi())
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="继承">继承</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">  // 父类
+  class Person {
+    constructor(name) {
+      this.name = name
+    }
+    eat() {
+      console.log(`${this.name} eat something`)
+    }
+  }
+
+  // 子类
+  class Student extends Person {
+    constructor(name, number) {
+      super(name)
+      this.number = number
+    }
+    sayHi() {
+      console.log(`姓名：${this.name},学号：${this.number}`)
+    }
+  }
+  // 另一个子类
+  class Teacher extends Person {
+    constructor(name, major) {
+      super(name)
+      this.major = major
+    }
+    teach() {
+      console.log(`${this.name}教授：${this.major}`)
+    }
+  }
+
+  const xialuo = new Student(&#39;夏洛&#39;, 100)
+  console.log(xialuo.name)
+  console.log(xialuo.number)
+  xialuo.sayHi()
+  xialuo.eat()
+
+  const wanglaoshi = new Teacher(&#39;王老师&#39;, &#39;数学&#39;)
+  console.log(wanglaoshi.name)
+  console.log(wanglaoshi.major)
+  wanglaoshi.teach()
+  wanglaoshi.eat()
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="类型判断---instanceof">类型判断 - instanceOf</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">xialuo intanceOf Student // true
+xialuo intanceOf Person // true
+xialuo intanceOf Object // true
+
+[] instanceOf Array // true
+[] instanceOf Object // true
+
+{} instanceOf Object // true
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="原型">原型</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">// class实际上是函数，可见是语法糖
+typeOf Person // &#39;function&#39;
+typeOf Student // &#39;function&#39;
+
+// 隐式原型和显示原型
+console.log(xialuo.__proto__)
+console.log(Student.prototype)
+console.log(xialuo.__proto__ === Student.prototype) // true
+</code></pre></td></tr></table>
+</div>
+</div><p><img src="http://yanxuan.nosdn.127.net/63de8aa846192792f6e9aec2202e30a5.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="原型.png"
+	
+	
+></p>
+<h4 id="原型关系">原型关系</h4>
+<ul>
+<li>每个<code>class</code>都有显式原型</li>
+<li>每个实例都有隐式原型 <code>__proto__</code></li>
+<li>实例的<code>__proto__</code>指向对应<code>class</code>的<code>prototype</code></li>
+</ul>
+<h4 id="基于原型的执行规则">基于原型的执行规则</h4>
+<ul>
+<li>获取属性<code>xialuo.name</code> 或执行方法<code>xialuo.sayHi()</code>时</li>
+<li>现在自身属性或方法寻找</li>
+<li>如果找不到则自动去<code>__proto__</code>寻找</li>
+</ul>
+<h3 id="原型链">原型链</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">console.log(Student.prototype.__proto__)
+console.log(Person.prototype)
+console.log(Student.prototype.__proto__ === Person.prototype) // true
+</code></pre></td></tr></table>
+</div>
+</div><p><img src="http://yanxuan.nosdn.127.net/bfe43487fbcbc810032d14c685150b18.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="原型链.png"
+	
+	
+></p>
+<h4 id="题目解答">题目解答</h4>
+<ul>
+<li>如何准确判断一个变量是不是数组？
+<code>a instanceOf Array</code></li>
+<li>手写一个简易的jQuery, 考虑插件和扩展机智</li>
+</ul>
+<h2 id="三作用域和闭包">三、作用域和闭包</h2>
+<h3 id="题目-1">题目</h3>
+<ul>
+<li>this的不同应用场景，如何取值？</li>
+<li>手写bind函数
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">// 手写bind
+
+// 使用bind
+function fn1(a, b, c) {
+    console.log(&#39;this&#39;, this)
+    console.log(a, b, c)
+    return &#39;this is this&#39;
+}
+
+// const fn2 = fn1.bind({x: 100}, 1, 2, 3)
+// fn2()
+
+Function.prototype.bind1 = function () {
+    const args = Array.from(arguments)
+    const t = args.shift()
+    const self = this
+    return function () {
+        self.apply(t, args)
+    }
+}
+const fn2 = fn1.bind1({x: 100}, 1, 2, 3)
+fn2()
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>实际开发中闭包的应用场景，举例说明
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">  // 闭包实现缓存
+function createCache() {
+    const data = {}
+    return {
+        get: function (key) {
+            return data[key]
+        },
+        set: function(key, val) {
+            data[key] = val
+        }
+    }
+}
+const c = createCache()
+c.set(&#39;name&#39;, 100)
+console.log(c.get(&#39;name&#39;))
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>创建10个<code>&lt;a&gt;</code>标签，点击时弹出对应的序号
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">let a, i
+for(i=0; i&lt;10 ;i++) {
+  document.createElement(&#39;a&#39;)
+  a.innerHTML = i + &#39;&lt;br&gt;&#39;
+  a.addEventListener(&#39;click&#39;, function(e) {
+    e.preventDefault()
+    alert(i)
+  })
+  document.body.appendChild(a)
+}
+// 每次点击都会弹出10
+
+// 下面这个才是正确的写法
+// let会生成块级作用域
+let a
+ for(let i=0; i&lt;10 ;i++) {
+  a = document.createElement(&#39;a&#39;)
+  a.innerHTML = i + &#39;&lt;br&gt;&#39;
+  a.addEventListener(&#39;click&#39;, function(e) {
+    e.preventDefault()
+    alert(i)
+  })
+  document.body.appendChild(a)
+}
+</code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+<h3 id="知识点-1">知识点</h3>
+<ul>
+<li>作用域和自由变量</li>
+<li>闭包
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">// 闭包
+
+// 函数作为返回值
+// function create() {
+//     let a = 100
+//     return function () {
+//         console.log(a)
+//     }
+// }
+// let fn = create()
+// let a = 200
+// fn() // 100
+
+// 函数作为参数
+function print(fn) {
+  let a = 200
+  fn()
+}
+let a = 100
+function fn() {
+  console.log(a)
+}
+print(fn)
+
+// 闭包：自由变量的查找，是函数定义的地方，向上级作用域查找，而不是执行的地方
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>this
+<ul>
+<li>在class方法中调用</li>
+<li>箭头函数</li>
+<li>谁调用，this指向谁</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">function fn1() {
+  console.log(this)
+}
+fn1() // window
+fn1.call({x: 100}) // {x: 100}
+const fn2 = fn1.bind({x: 200})
+fn2() // {x: 200}
+</code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">const zhangsan = {
+  name: &#39;张三&#39;,
+  sayHi () {
+    // this即当前对象
+    console.log(this)
+  },
+  wait () {
+    setTimeout(function () {
+      // this === window
+      console.log(this)
+    })
+  }
+}
+
+// 箭头函数不改变this指向
+const zhangsan = {
+  name: &#39;张三&#39;,
+  sayHi () {
+    // this即当前对象
+    console.log(this)
+  },
+  wait () {
+    setTimeout(() =&gt; {
+      // this即当前对象
+      console.log(this)
+    })
+  }
+}
+</code></pre></td></tr></table>
+</div>
+</div><p>在类中使用</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">class Person {
+  constructor(name) {
+    this.name = name
+    this.age = age
+  }
+  sayHi() {
+    console.log(this)
+  }
+}
+const zhangsan = new Person()
+zhangsan.sayHi() //zhangsan对象
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="五异步和单线程">五、异步和单线程</h2>
+<h3 id="同步和异步的区别">同步和异步的区别</h3>
+<h4 id="单线程和异步">单线程和异步</h4>
+<ul>
+<li><strong>JS</strong>只是单线程语言，只能同时做一件事</li>
+<li>浏览器和<strong>nodejs</strong>已支持JS启动进程，如<code>Web Worker</code></li>
+<li><strong>JS</strong>和<strong>DOM</strong>渲染共用同一个线程，因为JS可修改DOM结构</li>
+<li>遇到等待（网络请求，定时任务）不能卡住</li>
+<li>需要异步</li>
+</ul>
+<h3 id="应用场景">应用场景</h3>
+<ul>
+<li>网络请求</li>
+<li>定时任务</li>
+</ul>
+<h3 id="promise">promise</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">function getData(url) {
+  return new Promise((resolve, reject) =&gt; {
+    $.ajax({
+      url,
+      success(data) {
+        resolve(data)
+      },
+      error(err) {
+        reject(err)
+      }
+    })
+  })
+}
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="问题解答和总结">问题解答和总结</h3>
+<ul>
+<li>同步和异步的区别是什么
+<ul>
+<li>基于JS是单线程语言</li>
+<li>异步不会阻塞代码执行</li>
+<li>同步会阻塞代码执行</li>
+</ul>
+</li>
+<li>手写用<code>promise</code>加载一张图片
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">const url = &#34;http://yanxuan.nosdn.127.net/63de8aa846192792f6e9aec2202e30a5.png&#34;
+function loadImg(src) {
+    return new Promise((resolve, reject) =&gt; {
+        const img = document.createElement(&#39;img&#39;)
+        img.onload = () =&gt; {
+            resolve(img)
+        }
+        img.onerror = () =&gt; {
+            reject(new Error(&#39;图片加载失败&#39;))
+        }
+        img.src = src
+    })
+}
+loadImg(url).then(img =&gt; {
+    console.log(&#39;图片加载成功&#39;, img)
+}).catch(err  =&gt; {
+    console.log(`失败原因: ${err}`)
+})
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>前端使用异步的场景有哪些</li>
+</ul>
+<h2 id="六从js基础知识到js-web-api">六、从JS基础知识到JS Web API</h2>
+<h4 id="dom节点的property">DOM节点的property</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">const pList = document.querySelectorAll(&#39;p&#39;)
+p1 = pList[0]
+p1.style.width = &#39;100px&#39;
+console.log(p1.style.width)
+p1.className = &#39;red&#39;
+console.log(p1.className)
+console.log(p1.nodeName)
+console.log(p1.nodeType)
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="dom节点的attribute">DOM节点的attribute</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">p1.setAttribute(&#39;data-name&#39;, &#39;tangyuan&#39;)
+console.log(p1.getAttribute(&#39;data-name&#39;)) // tangyuan
+p1.setAttribute(&#39;style&#39;, &#39;font-size: 50px&#39;)
+console.log(p1.style.fontSize) // 50px
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="dom结构操作">DOM结构操作</h4>
+<ul>
+<li>新建节点
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">const p1 = document.createElement(&#39;p&#39;)
+p1.innerHTML = &#39;this is p1&#39;
+div1.appendChild(p1)
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>移动节点
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">const p2 = document.getElementById(&#39;p2&#39;)
+div2.appendChild(p2)
+</code></pre></td></tr></table>
+</div>
+</div><strong>添加已存在的节点会进行移动</strong></li>
+<li>获取父元素
+<code>child.parentNode</code></li>
+<li>获取子元素
+<code>parent.childNodes</code></li>
+<li>删除节点
+<code>removeChild</code></li>
+</ul>
+<h3 id="dom性能">DOM性能</h3>
+<ul>
+<li>DOM操作非常‘昂贵’,避免频繁的DOM操作</li>
+<li>对DOM查询做缓存
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">// 不缓存 DOM 查询结果
+for(let i =0 ;i&lt;document.getElementsByTagName(&#39;p&#39;).length; i++) {
+  // 每次循环，都会计算length, 频繁进行DOM查询
+}
+
+// 缓存 DOM 查询结果
+const pList = document.getElementsByTagName(&#39;p&#39;)
+const length = pList.length
+for(let i=0; i&lt;length; i++) {
+  // 缓存DOM， 只进行一次DOM查询
+}
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>将频繁操作改为一次性操作
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">const list = document.getElementById(&#39;list&#39;)
+
+// 创建一个文档片段，此时还没有插入到 DOM 结构中
+const frag = document.createDocumentFragment()
+for(let i=0; i&lt;20; i++) {
+    const li = document.createElement(&#39;li&#39;)
+    li.innerHTML = `List Item ${i}`
+
+    //先插入到文档片段
+    frag.appendChild(li)
+}
+
+// 都完成之和，再统一插入到 DOM 结构中
+list.appendChild(frag)
+</code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+<h2 id="七bom-操作">七、BOM 操作</h2>
+<ul>
+<li>navigator
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">const ua = navigator.userAgent
+const isChrome = ua.indexOf(&#39;Chrome&#39;)
+console.log(isChrome)
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>screen
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">screen.width
+screen.height
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>location
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">console.log(location.href)
+console.log(location.protocol)
+console.log(location.pathname)
+console.log(location.search)
+console.log(location.hash)
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>history
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">history.back()
+history.forward()
+</code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+<h2 id="八事件">八、事件</h2>
+<h3 id="事件绑定和事件冒泡">事件绑定和事件冒泡</h3>
+<ul>
+<li>事件绑定
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">const btn = document.getElementById(&#39;btn&#39;)
+btn.addEventListener(&#39;click&#39;, event =&gt; {
+  console.log(&#39;clicked&#39;)
+})
+
+// 通用的绑定函数
+function bindEvent(elem, type, fn) {
+  elem.addEventListener(type, fn)
+}
+const a = document.getElementById(&#39;link&#39;)
+bindEvent(a, &#39;click&#39;, e =&gt; {
+  e.preventDefault() //阻止默认行为
+  console.log(&#39;clicked&#39;)
+})
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>事件冒泡
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">const p = document.getElementById(&#39;p&#39;)
+const body = document.body
+bindEvent(p, &#39;click&#39;, e=&gt; {
+  e.stopPropagation()
+  console.log(&#39;激活)
+})
+bindEvent(body, &#39;click&#39;, e =&gt; {
+  console.log(&#39;取消&#39;)
+})
+</code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+<h3 id="事件代理">事件代理</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">// 通过事件冒泡实现代理
+// 一个支持事件代理的通用事件绑定函数
+function bindEvent(elem, type, selector,fn) {
+    if(fn == null ) {
+      fn = selector
+      selector = null
+    }
+    elem.addEventListener(type, e =&gt; {
+      let target
+      if(selector) {
+        target = e.target
+        if(target.matches(selector)) {
+          fn.call(target, e)
+        }
+      } else {
+        fn.call(target, e)
+      }
+    })
+  }
+
+const div = document.getElementById(&#39;div&#39;)
+bindEvent(div, &#39;click&#39;, event =&gt; {
+  event.preventDefault()
+  const target = event.target // 获取触发事件的节点
+  if(target.nodeName === &#39;A&#39;) {
+    console.log(target.innerHtml)
+  }
+})
+
+const a = document.getElementById(&#39;link&#39;)
+bindEvent(a, &#39;click&#39;, e =&gt; {
+  e.preventDefault() //阻止默认行为
+  console.log(&#39;clicked&#39;)
+})
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="九ajax">九、ajax</h2>
+<h3 id="xmlhttprequest">XMLHttpRequest</h3>
+<h4 id="手写一个ajax请求">手写一个ajax请求：</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">const xhr = new XMLHttpRequest()
+xhr.open(&#39;GET&#39;, &#39;/data/test.json&#39;, false)
+
+xhr.onreadystatechange = function () {
+    if(xhr.readyState === 4) {
+        if(xhr.status === 200) {
+            alert(xhr.responseText)
+        }
+    }
+}
+xhr.send()
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="xhrreadystate">xhr.readyState</h4>
+<ul>
+<li>0 -（未初始化）还没调用send()方法</li>
+<li>1 - （载入）已调用send()方法，正在发送请求</li>
+<li>2 - （载入完成）send()方法执行完成，已接收到全部响应内容</li>
+<li>3 - (交互) 正在解析响应内容</li>
+<li>4 - （完成）响应内容解析完成，可以在客户端调用</li>
+</ul>
+<h4 id="xhrstatus">xhr.status</h4>
+<ul>
+<li>2xx - 表示请求成功，如200</li>
+<li>3xx - 需要重定向， 浏览器直接跳转，如 301 302 304</li>
+<li>2xx - 客户端请求错误，如404， 403</li>
+<li>2xx - 服务端错误</li>
+</ul>
+<h3 id="同源策略和跨域">同源策略和跨域</h3>
+<h4 id="跨域">跨域</h4>
+<ul>
+<li>什么是跨域（同源策略）</li>
+<li>JSONP</li>
+<li>CORS（服务端支持）</li>
+</ul>
+<h4 id="同源策略">同源策略</h4>
+<ul>
+<li>ajax请求时，浏览器要求当前网页和server必须同源（安全）</li>
+<li>同源：协议、域名、端口，三者必须一致</li>
+<li>前端：http://a.com:8080/；server:https://b.com/api/xxx</li>
+</ul>
+<h4 id="加载-css-js-可无视同源策略">加载 <strong>css</strong> <strong>js</strong> 可无视同源策略</h4>
+<ul>
+<li><code>&lt;img src=跨域的图片地址 /&gt;</code></li>
+<li><code>&lt;link href=跨域的css地址 /&gt;</code></li>
+<li><code>&lt;script src=跨域的js地址&gt;&lt;/script&gt;</code></li>
+<li><code>&lt;img /&gt; 可用于统计打点， 可使用第三方统计服务</code></li>
+<li><code>&lt;link /&gt; &lt;script&gt; 可使用**CDN**,**CDN**一般都是外域</code></li>
+<li><code>&lt;script&gt; 可实现JSONP</code></li>
+</ul>
+<h4 id="跨域-1">跨域</h4>
+<ul>
+<li>所有的跨域，都必须经过server端配合</li>
+<li>未经server端允许就实现跨域，说明浏览器有漏洞，危险信号</li>
+</ul>
+<h3 id="jsonp和cors">JSONP和CORS</h3>
+<ul>
+<li>JSNOP
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">&lt;script&gt;
+window.callback = function (data) {
+  // 跨域得到的信息
+  console.log(data)
+}
+&lt;/script&gt;
+&lt;script src=&#34;jsonp.js&#34;&gt;&lt;/script&gt;
+
+//jsonp文件内容
+callback({
+  name: &#34;jsonp&#34;
+})
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>CORS - 服务器设置 http header
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">response.setHeader(&#34;Access-Control-Allow-Origin&#34;, &#34;http://localhost:8080&#34;)
+response.setHeader(&#34;Access-Control-Allow-Headers&#34;, &#34;X-Request-With&#34;)
+response.setHeader(&#34;Access-Control-Allow-Methods&#34;, &#34;PUT,POST,GET,DELETE,OPTIONS&#34;)
+</code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+<h2 id="十存储">十、存储</h2>
+<h3 id="cookie">cookie</h3>
+<ul>
+<li>本身用于浏览器和server通讯</li>
+<li>被“借用”到本地存储</li>
+<li>可用<code>document.cookie = &quot;&quot;</code> 修改</li>
+</ul>
+<h3 id="cookie的缺点">cookie的缺点</h3>
+<ul>
+<li>存储太小，最大4K</li>
+<li>http请求时需要发送到服务端，增加请求数据量</li>
+<li>只能用<code>document.cookie = &quot;&quot;</code>修改，太过简陋</li>
+</ul>
+<h3 id="localstorage-和-sessionstorage">localStorage 和 sessionStorage</h3>
+<ul>
+<li><strong>HTML5</strong>专门为存储而设计，最大可存5M</li>
+<li><strong>API</strong>简单易用 <strong>setItem</strong> <strong>getItem</strong></li>
+<li>不会随着<strong>http</strong>请求被发送出去</li>
+<li><strong>localStorage</strong>数据会永久存储，除非代码或手动删除</li>
+<li><strong>sessionStorage</strong>数据只存在于当前会话，浏览器关闭则清空</li>
+<li>一般用<strong>localStorage</strong>会更多一些</li>
+</ul>
+<h3 id="描述-cookie-localstorage-sessionstorage">描述 cookie localStorage sessionStorage</h3>
+<ul>
+<li>容量</li>
+<li><strong>API</strong>易用性</li>
+<li>是否跟随<strong>http</strong>请求发送出去</li>
+</ul>
+<h2 id="十一开发环境">十一、开发环境</h2>
+<h3 id="git">git</h3>
+<h4 id="常用git命令">常用git命令</h4>
+<ul>
+<li>git add</li>
+<li>git checkout xxx</li>
+<li>git commit -m xxx</li>
+<li>git push origin master</li>
+<li>git pull origin master</li>
+<li>git branch</li>
+<li>git checkout -b xxx/git checkout xxx</li>
+<li>git merge xxx</li>
+</ul>
+<h3 id="webpack-和-babel">webpack 和 babel</h3>
+<ul>
+<li>ES6 模块化，浏览器暂不支持</li>
+<li>ES6 语法，浏览器并不完全支持</li>
+<li>压缩代码，整合代码，以提高网页加载速度</li>
+</ul>
+<h3 id="webpack环境搭建">webpack环境搭建</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">// webpack.config.js
+const path = require(&#39;path&#39;)
+const HtmlWebpackPlugin = require(&#39;html-webpack-plugin&#39;)
+module.exports = {
+    mode: &#39;development&#39;,
+    entry: path.join(__dirname, &#39;src&#39;, &#39;index.js&#39;),
+    output: {
+        filename: &#39;bundle.js&#39;,
+        path: path.join(__dirname, &#39;dist&#39;)
+    },
+    plugins:[
+        new HtmlWebpackPlugin({
+            template: path.join(__dirname, &#39;src&#39;, &#39;index.html&#39;),
+            filename: &#39;index.html&#39;
+        })
+    ],
+    devServer:{
+        port: 3000,
+        contentBase: path.join(__dirname, &#39;dist&#39;)
+    }
+}
+</code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">// package.json
+&#34;scripts&#34;: {
+    &#34;test&#34;: &#34;&#34;,
+    &#34;build&#34;: &#34;webpack&#34;,
+    &#34;dev&#34;: &#34;webpack-dev-server&#34;
+  }
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="webpack-babel">webpack-babel</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">// 安装babel相关依赖
+npm i @babel/core @babel/preset-env babel-loader -D
+</code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">// 在根目录下创建.babelrc文件
+{
+    &#34;presets&#34;:[&#34;@babel/preset-env&#34;]
+}
+</code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">// 在webpack.config.js使用babel-loader
+module: {
+      rules: [
+          {
+              test: /\.js$/,
+              loader: [&#39;babel-loader&#39;],
+              include: path.join(__dirname, &#39;src&#39;),
+              exclude: /node_modules/
+          }
+      ]  
+}
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="webpack生产环境配置">webpack生产环境配置</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">// 新建一个webpack.prod.js
+const path = require(&#39;path&#39;)
+const HtmlWebpackPlugin = require(&#39;html-webpack-plugin&#39;)
+module.exports = {
+    mode: &#39;production&#39;,
+    entry: path.join(__dirname, &#39;src&#39;, &#39;index.js&#39;),
+    output: {
+        filename: &#39;bundle[contenthash].js&#39;,
+        path: path.join(__dirname, &#39;dist&#39;)
+    },
+    plugins:[
+        new HtmlWebpackPlugin({
+            template: path.join(__dirname, &#39;src&#39;, &#39;index.html&#39;),
+            filename: &#39;index.html&#39;
+        })
+    ],
+    module: {
+      rules: [
+          {
+              test: /\.js$/,
+              loader: [&#39;babel-loader&#39;],
+              include: path.join(__dirname, &#39;src&#39;),
+              exclude: /node_modules/
+          }
+      ]  
+    }
+}
+</code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">// package.json
+&#34;scripts&#34;: {
+    &#34;test&#34;: &#34;&#34;,
+    &#34;build&#34;: &#34;webpack --config webpack.prod.js&#34;,
+    &#34;dev&#34;: &#34;webpack-dev-server&#34;
+  }
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="linux常用命令">linux常用命令</h3>
+<ul>
+<li>ls</li>
+<li>mkdir</li>
+<li>rm</li>
+<li>cd</li>
+<li>mv</li>
+<li>cp</li>
+<li>touch</li>
+<li>vi</li>
+<li>cat head tail</li>
+<li>grep 查找 <code>grep &quot;babel&quot; package.json</code></li>
+</ul>
+<h2 id="运行环境-1">运行环境</h2>
+<ul>
+<li>网页加载过程</li>
+<li>性能优化</li>
+<li>安全</li>
+</ul>
+<h3 id="页面加载过程">页面加载过程</h3>
+<h4 id="题目-2">题目</h4>
+<ul>
+<li>从输入url到渲染出整个页面的过程</li>
+<li>window.onload 和 DOMContentLoaded 的区别</li>
+</ul>
+<h4 id="知识点-2">知识点</h4>
+<ul>
+<li>资源加载的形式
+<ul>
+<li>html文件</li>
+<li>媒体文件，如图片、视频等</li>
+<li>javascript css</li>
+</ul>
+</li>
+<li>资源加载的过程
+<ul>
+<li>DNS解析：域名 -&gt; IP地址</li>
+<li>浏览器根据IP地址向服务器发起http请求</li>
+<li>服务器处理http请求，并返回给浏览器</li>
+</ul>
+</li>
+<li>页面渲染的过程
+<ul>
+<li>根据 HTML 代码生成 DOM Tree</li>
+<li>根据 CSS 生成 CSSOM</li>
+<li>将 DOM Tree 和 CSSOM 整合形成 Render Tree</li>
+<li>根据 Render Tree 渲染页面</li>
+<li>遇到 <code>&lt;script&gt;</code> 则暂停渲染，优先加载并执行JS代码，完成再继续， 一直到Render Tree渲染完成</li>
+</ul>
+</li>
+</ul>
+<h4 id="思考">思考:</h4>
+<ul>
+<li>为何建议把 css 放到 head 中？
+答：先加载css，DOM tree生成之和，两者整合生成Render Tree，避免多次渲染</li>
+<li>为什么把 js 放在body最后？
+答：加载<code>&lt;script&gt;</code>标签会暂停渲染</li>
+</ul>
+<h4 id="问题解答">问题解答</h4>
+<ul>
+<li>从输入url到渲染出整个页面的过程
+<ul>
+<li>下载资源：各个类型的资源，下载过程</li>
+<li>渲染页面：结合 html css javascript 图片等</li>
+</ul>
+</li>
+<li>window.onload 和 DOMContentLoaded 的区别
+<ul>
+<li>window.onload 资源全部加载完才能执行，包括图片</li>
+<li>DOMContentLoaded DOM渲染完成即可，图片可能尚未下载</li>
+</ul>
+</li>
+</ul>
+<h2 id="十三性能优化">十三、性能优化</h2>
+<h3 id="性能优化原则和方向">性能优化原则和方向</h3>
+<h4 id="性能优化原则">性能优化原则</h4>
+<ul>
+<li>多使用内存、缓存或其他方法</li>
+<li>减少CPU计算量，减少网络加载耗时</li>
+<li>空间换时间</li>
+</ul>
+<h4 id="从何入手">从何入手</h4>
+<h5 id="让加载更快">让加载更快</h5>
+<ul>
+<li>减少资源体积：压缩代码</li>
+<li>减少访问次数：合并代码，SSR 服务器端渲染，缓存
+<strong>合并请求：</strong>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">//多次请求
+&lt;script src=&#34;a.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;b.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;c.js&#34;&gt;&lt;/script&gt;
+
+// 合别为一次请求
+&lt;script src=&#34;abc.js&#34;&gt;&lt;/script&gt;
+</code></pre></td></tr></table>
+</div>
+</div><strong>缓存:</strong>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">// webpack打包时给文件名加上hash
+output:{
+  filename: &#39;bundle.[contenthash].js&#39;,
+  path: path.join(__dir, &#39;dist&#39;)
+}
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>静态资源加hash后缀，根据文件内容计算hash</li>
+<li>文件内容不变，则hash不变，则url不变</li>
+<li>url和文件不变，则会自动触发http缓存机制，返回304
+<strong>SSR</strong></li>
+<li>服务端渲染： 将网页和数据一起加载，一起渲染</li>
+<li>非SSR(前后端分离)：先加载网页，再加载数据，再渲染数据</li>
+<li>最早的JSP ASP PHP, 现在的vue React SSR</li>
+</ul>
+</li>
+<li>使用更快的网络：CDN</li>
+</ul>
+<h5 id="让渲染更快">让渲染更快</h5>
+<ul>
+<li>CSS放在head， JS 放在body最下面</li>
+<li>尽早开始执行JS，在 <code>DOMContentLoaded</code>触发
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">window.addEventListener(&#39;load&#39;, function(){
+  // 页面全部资源加载完毕才会执行，包括图片、视频等
+})
+
+document.addEventListener(&#39;DOMContentLoaded&#39;, function(){
+  // DOM 渲染完成即可执行，此时图片、视频还没有加载完
+})
+
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>懒加载(图片懒加载， 上滑加载更多)
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">&lt;img id=&#34;img&#34; src=&#34;default.png&#34; data-realsrc=&#34;abc.png&#34;&gt;
+
+&lt;script type=&#34;text/javascript&#34;&gt;
+var img = document.getElementById(&#39;img&#39;)
+img.src = img.getAttribute(&#39;data-realsrc&#39;)
+&lt;/script&gt;
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>对 DOM 查询进行缓存</li>
+<li>避免频繁操作DOM，合并一起插入DOM结构
+使用<code>document.createDocumentFragment()</code>创建文档片段，合并DOM操作</li>
+<li>节流 <code>throttle</code>  防抖 <code>debounce</code></li>
+</ul>
+<h3 id="防抖">防抖</h3>
+<p>简易实现方式</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">const input = document.getElementById(&#39;input&#39;)
+let timer = null
+input.addEventListener(&#39;keyup&#39;, function (e) {
+  if (timer) {
+    clearTimeout(timer)
+  }
+  timer = setTimeout(() =&gt; {
+    console.log(e.target.value)
+    timer = null // 清除定时器
+  }, 500)
+})
+// 每次输入之和隔500毫秒输出当前value
+</code></pre></td></tr></table>
+</div>
+</div><p>封装成debounce函数</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">function debounce(fn, delay) {
+  let timer
+  return function () {
+    if (timer) {
+      clearTimeout(timer)
+    }
+    timer = setTimeout(() =&gt; {
+      fn.apply(this, arguments)
+      timer = null
+    }, delay)
+  }
+}
+input.addEventListener(
+  &#39;keyup&#39;,
+  debounce((e) =&gt; {
+    console.log(e.target.value)
+  }, 500)
+)
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="节流">节流</h3>
+<p>简单实现</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">const div = document.getElementById(&#39;div&#39;)
+let timer
+div.addEventListener(&#39;drag&#39;, function(e)  {    
+    if(timer) return
+    timer = setTimeout(() =&gt;{
+        console.log(e.offsetX, e.offsetY)
+        timer = null
+    }, 500)
+})
+</code></pre></td></tr></table>
+</div>
+</div><p>封装成函数</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">function throttle(fn, delay) {
+    let timer
+    return function () {
+        if(timer) return
+        timer = setTimeout(() =&gt; {
+            fn.apply(this, arguments)
+            timer = null
+        }, delay)
+    }
+}
+div.addEventListener(&#39;drag&#39;, throttle((e) =&gt; {
+    console.log(e.offsetX, e.offsetY)
+}, 500))
+</code></pre></td></tr></table>
+</div>
+</div><p>十三、面试技巧</p>
+<h3 id="关于简历">关于简历</h3>
+<ul>
+<li>简洁明了，突出个人技能和项目经验</li>
+<li>可以把个人博客、开源作品放在简历上（但博客要有内容）</li>
+<li>不要造假，保证能力上的真实性（斟酌用词，如精通xxx）</li>
+</ul>
+<h3 id="面试过程中注意事项">面试过程中注意事项</h3>
+<ul>
+<li>如何看待加班：像借钱，救急不救穷</li>
+<li>千万不要挑战面试官，反考面试官</li>
+<li>学会给面试官惊喜，证明你能想到更多，做的更多，但不要太多</li>
+<li>遇到不会的问题，说出自己会的部分即可，但别岔开话题</li>
+<li>谈谈你的缺点：说下最近在学什么。</li>
+</ul>
+<h2 id="十四面试真题">十四、面试真题</h2>
+<h4 id="何为变量提升">何为变量提升</h4>
+<ul>
+<li>var是ES5语法，let const 是 ES6语法；var有变量提升</li>
+<li>var let是变量，可修改；const是常量，不可修改</li>
+<li>let const 有块级作用域；var 没有</li>
+</ul>
+<h4 id="typeof-能判断哪些类型">typeOf 能判断哪些类型</h4>
+<ul>
+<li>undefined string number boolean symbool</li>
+<li>object(注意， typeOf null === &lsquo;object&rsquo;)</li>
+<li>function</li>
+</ul>
+<h4 id="列举强制类型转换与隐式类型转换">列举强制类型转换与隐式类型转换</h4>
+<ul>
+<li>强制：<code>parseInt</code> <code>parseFloat</code> <code>toString</code>等</li>
+<li>隐式：if、逻辑运算、==、+ 拼接字符串</li>
+</ul>
+<h4 id="手写深度比较">手写深度比较</h4>
+<h4 id="split和join区别">split()和join()区别</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">&#39;1-2-3&#39;.split(&#39;-&#39;) // [1,2,3]
+[1,2,3].join(&#39;-&#39;) // &#39;1-2-3&#39;
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="数组的pop-push-unshift-shift-分别做什么">数组的pop push unshift shift 分别做什么</h4>
+<h4 id="数组的api有哪些是纯函数">数组的API，有哪些是纯函数</h4>
+<blockquote>
+<p>纯函数：1. 不改变原数组（没有副作用）；2. 返回一个新数组</p>
+</blockquote>
+<ul>
+<li>concat</li>
+<li>map</li>
+<li>filter</li>
+<li>slice
+<code>forEach some every</code>也不改变原数组，但是具有返回值</li>
+</ul>
+<h4 id="数组slice和splice的区别">数组slice和splice的区别</h4>
+<p>slice是纯函数， splice非纯函数</p>
+<h4 id="102030mapparseint返回结果是什么">[10,20,30].map(parseInt)返回结果是什么</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">[10,20,30].map(parseInt)
+// 可以转化为下面这种形式
+[10,20,30].map((n,index) =&gt; {
+  return parseInt(n, index)
+})
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="ajax请求get-和-post-区别">ajax请求get 和 post 区别？</h4>
+<ul>
+<li>get一般用于查询，post一般用于提交操作</li>
+<li>get参数拼接在url上，post放在请求体内</li>
+<li>安全性：post易于防止CSRF</li>
+</ul>
+<h4 id="函数call-和-apply-区别">函数call 和 apply 区别</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">fn.call(this, p1,p2,p3)
+fn.apply(this, [p1,p2,p3])
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="时间代理委托是什么">时间代理（委托）是什么</h4>
+<p>通过事件冒泡机制实现</p>
+<h4 id="闭包是什么有什么特性有什么负面影响">闭包是什么？有什么特性？有什么负面影响？</h4>
+<ul>
+<li>作用域和自由变量</li>
+<li>应用场景：作为参数传入，作为返回值返回</li>
+<li>自由变量的查找，在<strong>函数定义的地方</strong></li>
+<li>影响： 变量常驻内存，内存得不到释放</li>
+</ul>
+<h4 id="如何阻止事件冒泡和默认行为">如何阻止事件冒泡和默认行为？</h4>
+<ul>
+<li>event.stopPropagation()</li>
+<li>event.preventDefault()</li>
+</ul>
+<h4 id="查找添加删除移动dom节点的方法">查找、添加、删除、移动DOM节点的方法？</h4>
+<h4 id="如何减少dom操作">如何减少DOM操作？</h4>
+<ul>
+<li>缓存DOM查询结果</li>
+<li>多次DOM操作，合并到一次插入(createDocumentFragment)</li>
+</ul>
+<h4 id="解释jsonp的原理为何它不是真正的ajax">解释jsonp的原理，为何它不是真正的ajax？</h4>
+<ul>
+<li>浏览器的同源策略和跨域</li>
+<li>哪些html标签能绕过跨域</li>
+<li>jsonp原理</li>
+</ul>
+<h4 id="document-load-和-ready-的区别">document load 和 ready 的区别</h4>
+<ul>
+<li>window.onload 资源全部加载完才能执行，包括图片</li>
+<li>DOMContentLoaded DOM渲染完成即可，图片可能尚未下载</li>
+</ul>
+<h4 id="-和--的不同">== 和 === 的不同</h4>
+<ul>
+<li>== 会尝试类型转换</li>
+<li>=== 严格相等</li>
+<li>建议只有 == null 这种情况下使用 ==</li>
+</ul>
+<h4 id="函数声明和函数表达式的区别">函数声明和函数表达式的区别</h4>
+<ul>
+<li>函数声明 <code>function (){}</code></li>
+<li>函数表达式 <code>const fn = function(){}</code></li>
+<li>函数声明会在代码执行之前预加载，会变量提升，而函数表达式不会</li>
+</ul>
+<h4 id="new-object-和-objectcreate的区别">new Object() 和 Object.create()的区别？</h4>
+<ul>
+<li>{} 等同于new Object(), 原型Object.prototype</li>
+<li>Object.create(null) 没有原型</li>
+<li>Object.create({&hellip;}) 可指定原型</li>
+</ul>
+<h4 id="关于this的使用场景">关于this的使用场景</h4>
+<h4 id="手写字符串-trim-方法保证浏览器兼容性">手写字符串 trim 方法，保证浏览器兼容性</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">String.prototype.trim = function () {
+  return this.replace(/^\s+/, &#39;&#39;).replace(/\s+$/, &#39;&#39;)
+}
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="如何获取多个数字中最大值">如何获取多个数字中最大值</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">/**
+ * 取数组中最大值
+ * @param {number[]} nums  数组
+ */
+function max(nums) {
+    // let arr = Array.from(arguments)
+    let max = 0
+    for(let value of nums) {
+        max = Math.max(max, value)
+    }
+    return max
+}
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="如何用js实现继承">如何用JS实现继承</h4>
+<ul>
+<li>class</li>
+<li>prototype</li>
+</ul>
+<h4 id="如何捕获js程序中异常">如何捕获JS程序中异常</h4>
+<ul>
+<li>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">try {
+
+  } catch(err) {
+    console.log(err)
+  } 
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li><code>window.onerror = function(){}</code></li>
+</ul>
+<h4 id="什么是json">什么是JSON</h4>
+<ul>
+<li>json是一种数据格式，本质是字符串</li>
+<li>json格式和JS对象结构一致，对JS语言更友好</li>
+<li>window.JSON是一个全局对象：JSON.stringify JSON.parse</li>
+</ul>
+<h4 id="获取当前页面的url参数">获取当前页面的url参数</h4>
+<ul>
+<li>传统方式，通过<code>location.search</code></li>
+<li>新API， <code>URLSearchParams</code></li>
+</ul>
+<h4 id="将url参数解析为js对象">将url参数解析为JS对象</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">// 传统方式，分析search
+function queryToObj() {
+  const res = {}
+  const search = location.search.substr(1) // 去掉前面的”？“
+  search.split(&#39;&amp;&#39;).forEach((p) =&gt; {
+    const arr = p.split(&#39;=&#39;)
+    const key = arr[0]
+    const val = arr[1]
+    res[key] = val
+  })
+  return res
+}
+
+// 使用URLSearchParams
+function queryToObj() {
+    const res = {}
+    const pList = new URLSearchParams(location.search)
+    pList.forEach((val, key) =&gt; {
+        res[key] = val
+    })
+    return res
+}
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="手写数组flatern-考虑多层级">手写数组flatern, 考虑多层级</h4>
+<h4 id="数组去重">数组去重</h4>
+<h4 id="手写深拷贝">手写深拷贝</h4>
+<h4 id="介绍一下raf-requestanimateframe">介绍一下RAF requestAnimateFrame</h4>
+<h4 id="前端性能如何优化一般从哪几方面进行考虑">前端性能如何优化？一般从哪几方面进行考虑？</h4>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/%E9%9D%A2%E8%AF%95/">面试</a>
+        
+            <a href="/tags/javascript/">Javascript</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+     
+    
+        
+    <div class="disqus-container">
+    <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "hugo-theme-stack" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+<style>
+    .disqus-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+    }
+</style>
+
+<script>
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (DISQUS) {
+            DISQUS.reset({
+                reload: true
+            });
+        }
+    })
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2020 - 
+        
+        2022 一条鱼尾的博客
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.11.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+        备案号：苏ICP备2021052498号
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css"integrity="sha256-c0uckgykQ9v5k&#43;IqViZOZKc47Jn7KQil4/MP3ySA3F8="crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css"integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE="crossorigin="anonymous"
+            >
+
+            </main>
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#一简介">一、简介</a>
+      <ol>
+        <li><a href="#如何搞定所有面试题">如何搞定所有面试题</a></li>
+        <li><a href="#前端知识体系">前端知识体系</a>
+          <ol>
+            <li><a href="#什么是知识体系">什么是知识体系</a></li>
+            <li><a href="#从哪方面梳理">从哪方面梳理</a></li>
+            <li><a href="#知识体系目录">知识体系目录</a></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+    <li><a href="#二变量类型和计算">二、变量类型和计算</a>
+      <ol>
+        <li><a href="#变量类型和计算">变量类型和计算</a>
+          <ol>
+            <li><a href="#题目">题目</a></li>
+            <li><a href="#知识点">知识点</a></li>
+            <li><a href="#解答">解答</a></li>
+          </ol>
+        </li>
+        <li><a href="#typeof-和深拷贝">typeof 和深拷贝</a>
+          <ol>
+            <li><a href="#typeof运算符">typeOf运算符</a></li>
+            <li><a href="#深拷贝">深拷贝</a></li>
+          </ol>
+        </li>
+        <li><a href="#变量计算">变量计算</a>
+          <ol>
+            <li><a href="#类型转换">类型转换</a></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+    <li><a href="#三原型和原型链">三、原型和原型链</a>
+      <ol>
+        <li><a href="#class">class</a></li>
+        <li><a href="#继承">继承</a></li>
+        <li><a href="#类型判断---instanceof">类型判断 - instanceOf</a></li>
+        <li><a href="#原型">原型</a>
+          <ol>
+            <li><a href="#原型关系">原型关系</a></li>
+            <li><a href="#基于原型的执行规则">基于原型的执行规则</a></li>
+          </ol>
+        </li>
+        <li><a href="#原型链">原型链</a>
+          <ol>
+            <li><a href="#题目解答">题目解答</a></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+    <li><a href="#三作用域和闭包">三、作用域和闭包</a>
+      <ol>
+        <li><a href="#题目-1">题目</a></li>
+        <li><a href="#知识点-1">知识点</a></li>
+      </ol>
+    </li>
+    <li><a href="#五异步和单线程">五、异步和单线程</a>
+      <ol>
+        <li><a href="#同步和异步的区别">同步和异步的区别</a>
+          <ol>
+            <li><a href="#单线程和异步">单线程和异步</a></li>
+          </ol>
+        </li>
+        <li><a href="#应用场景">应用场景</a></li>
+        <li><a href="#promise">promise</a></li>
+        <li><a href="#问题解答和总结">问题解答和总结</a></li>
+      </ol>
+    </li>
+    <li><a href="#六从js基础知识到js-web-api">六、从JS基础知识到JS Web API</a>
+      <ol>
+        <li>
+          <ol>
+            <li><a href="#dom节点的property">DOM节点的property</a></li>
+            <li><a href="#dom节点的attribute">DOM节点的attribute</a></li>
+            <li><a href="#dom结构操作">DOM结构操作</a></li>
+          </ol>
+        </li>
+        <li><a href="#dom性能">DOM性能</a></li>
+      </ol>
+    </li>
+    <li><a href="#七bom-操作">七、BOM 操作</a></li>
+    <li><a href="#八事件">八、事件</a>
+      <ol>
+        <li><a href="#事件绑定和事件冒泡">事件绑定和事件冒泡</a></li>
+        <li><a href="#事件代理">事件代理</a></li>
+      </ol>
+    </li>
+    <li><a href="#九ajax">九、ajax</a>
+      <ol>
+        <li><a href="#xmlhttprequest">XMLHttpRequest</a>
+          <ol>
+            <li><a href="#手写一个ajax请求">手写一个ajax请求：</a></li>
+            <li><a href="#xhrreadystate">xhr.readyState</a></li>
+            <li><a href="#xhrstatus">xhr.status</a></li>
+          </ol>
+        </li>
+        <li><a href="#同源策略和跨域">同源策略和跨域</a>
+          <ol>
+            <li><a href="#跨域">跨域</a></li>
+            <li><a href="#同源策略">同源策略</a></li>
+            <li><a href="#加载-css-js-可无视同源策略">加载 <strong>css</strong> <strong>js</strong> 可无视同源策略</a></li>
+            <li><a href="#跨域-1">跨域</a></li>
+          </ol>
+        </li>
+        <li><a href="#jsonp和cors">JSONP和CORS</a></li>
+      </ol>
+    </li>
+    <li><a href="#十存储">十、存储</a>
+      <ol>
+        <li><a href="#cookie">cookie</a></li>
+        <li><a href="#cookie的缺点">cookie的缺点</a></li>
+        <li><a href="#localstorage-和-sessionstorage">localStorage 和 sessionStorage</a></li>
+        <li><a href="#描述-cookie-localstorage-sessionstorage">描述 cookie localStorage sessionStorage</a></li>
+      </ol>
+    </li>
+    <li><a href="#十一开发环境">十一、开发环境</a>
+      <ol>
+        <li><a href="#git">git</a>
+          <ol>
+            <li><a href="#常用git命令">常用git命令</a></li>
+          </ol>
+        </li>
+        <li><a href="#webpack-和-babel">webpack 和 babel</a></li>
+        <li><a href="#webpack环境搭建">webpack环境搭建</a></li>
+        <li><a href="#webpack-babel">webpack-babel</a></li>
+        <li><a href="#webpack生产环境配置">webpack生产环境配置</a></li>
+        <li><a href="#linux常用命令">linux常用命令</a></li>
+      </ol>
+    </li>
+    <li><a href="#运行环境-1">运行环境</a>
+      <ol>
+        <li><a href="#页面加载过程">页面加载过程</a>
+          <ol>
+            <li><a href="#题目-2">题目</a></li>
+            <li><a href="#知识点-2">知识点</a></li>
+            <li><a href="#思考">思考:</a></li>
+            <li><a href="#问题解答">问题解答</a></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+    <li><a href="#十三性能优化">十三、性能优化</a>
+      <ol>
+        <li><a href="#性能优化原则和方向">性能优化原则和方向</a>
+          <ol>
+            <li><a href="#性能优化原则">性能优化原则</a></li>
+            <li><a href="#从何入手">从何入手</a></li>
+          </ol>
+        </li>
+        <li><a href="#防抖">防抖</a></li>
+        <li><a href="#节流">节流</a></li>
+        <li><a href="#关于简历">关于简历</a></li>
+        <li><a href="#面试过程中注意事项">面试过程中注意事项</a></li>
+      </ol>
+    </li>
+    <li><a href="#十四面试真题">十四、面试真题</a>
+      <ol>
+        <li>
+          <ol>
+            <li><a href="#何为变量提升">何为变量提升</a></li>
+            <li><a href="#typeof-能判断哪些类型">typeOf 能判断哪些类型</a></li>
+            <li><a href="#列举强制类型转换与隐式类型转换">列举强制类型转换与隐式类型转换</a></li>
+            <li><a href="#手写深度比较">手写深度比较</a></li>
+            <li><a href="#split和join区别">split()和join()区别</a></li>
+            <li><a href="#数组的pop-push-unshift-shift-分别做什么">数组的pop push unshift shift 分别做什么</a></li>
+            <li><a href="#数组的api有哪些是纯函数">数组的API，有哪些是纯函数</a></li>
+            <li><a href="#数组slice和splice的区别">数组slice和splice的区别</a></li>
+            <li><a href="#102030mapparseint返回结果是什么">[10,20,30].map(parseInt)返回结果是什么</a></li>
+            <li><a href="#ajax请求get-和-post-区别">ajax请求get 和 post 区别？</a></li>
+            <li><a href="#函数call-和-apply-区别">函数call 和 apply 区别</a></li>
+            <li><a href="#时间代理委托是什么">时间代理（委托）是什么</a></li>
+            <li><a href="#闭包是什么有什么特性有什么负面影响">闭包是什么？有什么特性？有什么负面影响？</a></li>
+            <li><a href="#如何阻止事件冒泡和默认行为">如何阻止事件冒泡和默认行为？</a></li>
+            <li><a href="#查找添加删除移动dom节点的方法">查找、添加、删除、移动DOM节点的方法？</a></li>
+            <li><a href="#如何减少dom操作">如何减少DOM操作？</a></li>
+            <li><a href="#解释jsonp的原理为何它不是真正的ajax">解释jsonp的原理，为何它不是真正的ajax？</a></li>
+            <li><a href="#document-load-和-ready-的区别">document load 和 ready 的区别</a></li>
+            <li><a href="#-和--的不同">== 和 === 的不同</a></li>
+            <li><a href="#函数声明和函数表达式的区别">函数声明和函数表达式的区别</a></li>
+            <li><a href="#new-object-和-objectcreate的区别">new Object() 和 Object.create()的区别？</a></li>
+            <li><a href="#关于this的使用场景">关于this的使用场景</a></li>
+            <li><a href="#手写字符串-trim-方法保证浏览器兼容性">手写字符串 trim 方法，保证浏览器兼容性</a></li>
+            <li><a href="#如何获取多个数字中最大值">如何获取多个数字中最大值</a></li>
+            <li><a href="#如何用js实现继承">如何用JS实现继承</a></li>
+            <li><a href="#如何捕获js程序中异常">如何捕获JS程序中异常</a></li>
+            <li><a href="#什么是json">什么是JSON</a></li>
+            <li><a href="#获取当前页面的url参数">获取当前页面的url参数</a></li>
+            <li><a href="#将url参数解析为js对象">将url参数解析为JS对象</a></li>
+            <li><a href="#手写数组flatern-考虑多层级">手写数组flatern, 考虑多层级</a></li>
+            <li><a href="#数组去重">数组去重</a></li>
+            <li><a href="#手写深拷贝">手写深拷贝</a></li>
+            <li><a href="#介绍一下raf-requestanimateframe">介绍一下RAF requestAnimateFrame</a></li>
+            <li><a href="#前端性能如何优化一般从哪几方面进行考虑">前端性能如何优化？一般从哪几方面进行考虑？</a></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js"integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+<script>
+    const el = document.querySelector('.powerby')
+    console.log('el:', el)
+    const beian = document.createElement('span')
+    beian.style='margin-left:1rem;'
+    beian.innerText = '备案号：苏ICP备2021052498号'
+    el.appendChild(beian)
+</script>
+    </body>
+</html>

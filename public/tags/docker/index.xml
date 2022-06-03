@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>docker on 一条鱼尾的博客</title>
+        <link>https://example.com/tags/docker/</link>
+        <description>Recent content in docker on 一条鱼尾的博客</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <lastBuildDate>Wed, 06 May 2020 20:02:47 +0800</lastBuildDate><atom:link href="https://example.com/tags/docker/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>win10系统使用VMware虚拟机ubuntu系统通过docker运行Redis</title>
+        <link>https://example.com/p/win10%E7%B3%BB%E7%BB%9F%E4%BD%BF%E7%94%A8vmware%E8%99%9A%E6%8B%9F%E6%9C%BAubuntu%E7%B3%BB%E7%BB%9F%E9%80%9A%E8%BF%87docker%E8%BF%90%E8%A1%8Credis/</link>
+        <pubDate>Wed, 06 May 2020 20:02:47 +0800</pubDate>
+        
+        <guid>https://example.com/p/win10%E7%B3%BB%E7%BB%9F%E4%BD%BF%E7%94%A8vmware%E8%99%9A%E6%8B%9F%E6%9C%BAubuntu%E7%B3%BB%E7%BB%9F%E9%80%9A%E8%BF%87docker%E8%BF%90%E8%A1%8Credis/</guid>
+        <description>&lt;p&gt;五一期间花了一两天时间学了下docker，虽然仅仅学会了几个命令，但是仍然体会到其强大。
+之前在本地win10系统运行Redis需要先下载安装包，然后进行安装。安装好之后再通过命令行启动服务。具体可见&lt;a class=&#34;link&#34; href=&#34;https://www.runoob.com/redis/redis-install.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;菜鸟教程安装Redis&lt;/a&gt;
+但是通过docker的话就只需要几个命令就可以&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;docker pull redis:latest // 安装最新的redis
+docker run -itd --name redis-test -p 6379:6379 redis
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;同样，菜鸟教程也有完整的&lt;a class=&#34;link&#34; href=&#34;https://www.runoob.com/docker/docker-install-redis.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;docker搭建Redis示例&lt;/a&gt;
+起初我是直接看电子书学习docker,有不少问题，比如版本不对，命令不生效，报错不知道如何解决。后来偶然发现开源的&lt;a class=&#34;link&#34; href=&#34;https://yeasy.gitbook.io/docker_practice/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;docker从入门到实战&lt;/a&gt;在线教程，真的比啃书舒服多了，毕竟技术时效性太强了。&lt;strong&gt;感谢开源！&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;好了扯了这么多开始进入正题，本地怎么访问到虚拟机里面docker运行的服务？
+上面已经说了Docker如何运行服务并映射到本地端口，那么剩下问题就是&lt;strong&gt;获取虚拟机的ip地址&lt;/strong&gt;，然后本地通过&lt;strong&gt;虚拟机的ip地址+docker容器映射的端口&lt;/strong&gt;就可以访问对应的服务了
+那怎么获取虚拟机的IP地址呢，google了下，虚拟机网络模式，无论是vmware,virtual box,virtual pc等虚拟机软件，一般来说，虚拟机有三种网络模式:&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;桥接&lt;/li&gt;
+&lt;li&gt;NAT&lt;/li&gt;
+&lt;li&gt;Host-Only&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;重点&lt;/strong&gt;： 由于NAT的网络在vmware提供的一个虚拟网络里，所以局域网其他主机是无法访问虚拟机的，而宿主机可以访问虚拟机，虚拟机可以访问局域网的所有主机，具体可见（&lt;a class=&#34;link&#34; href=&#34;https://www.cnblogs.com/ggjucheng/archive/2012/08/19/2646007.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;实例讲解虚拟机3种网络模式(桥接、nat、Host-only)&lt;/a&gt;）&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;由于只需要本地访问虚拟机ip地址，我果断地选择了默认的NAT模式&lt;/p&gt;
+&lt;p&gt;然后在ubuntu中获取IP地址，可以通过&lt;code&gt;ifconfig -a&lt;/code&gt;命令
+&lt;img src=&#34;http://yanxuan.nosdn.127.net/1b690ab3282a866a94612f33e6ba6db0.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Ubuntu查看ip地址&#34;
+	
+	
+&gt;
+箭头所指地就是虚拟机地ip地址了
+然后我们本地Ping一下试试
+&lt;img src=&#34;http://yanxuan.nosdn.127.net/437bd3249b9bdabceff927646e91bf0c.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;本地Ping虚拟机的IP地址&#34;
+	
+	
+&gt;
+GOOD！没有任何问题！接下来可以验证下Redis服务能不能使用了。
+首先试一下通过本地redis-cli连接docker服务，set几个key
+&lt;img src=&#34;http://yanxuan.nosdn.127.net/549ded049e119d39daf4e7db493e36a9.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;本地redis-cli连接docker redis服务&#34;
+	
+	
+&gt;
+可以看出，目前redis服务里有两个key值，分别是test, testvalue
+再到虚拟机的docker看一下，完全一样！
+&lt;img src=&#34;http://yanxuan.nosdn.127.net/e743037486e0919b2bf6a722a4ed8903.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;docker 容器内查看redis服务&#34;
+	
+	
+&gt;
+到此也就结束了，其实大部分都是google来的，照着做了一遍解决了问题。给我的启示就是多搜索，多想多动手才能解决问题。同时积累基础知识（linux,docker），可能一时没法精通，但是接触、积累多了总会熟悉、精通的，这是个必须且正向的过程。&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>
